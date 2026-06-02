@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ŪNNO YOGA | Estudio de Yoga en San Pedro Garza García</title>
+  <meta name="description" content="ŪNNO YOGA — Iyengar Yoga certificado, Yoga Restaurativo y Vinyasa en Centrito Valle, San Pedro Garza García. Lun–Jue 10:00–12:00 y 18:30–21:30." />
+  <meta property="og:title" content="ŪNNO YOGA | Estudio de Yoga en San Pedro Garza García" />
+  <meta property="og:description" content="La ciencia y el arte de habitar tu cuerpo. Iyengar Yoga certificado, Restaurativo y Vinyasa en el corazón de Centrito Valle." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://unno-yoga.vercel.app" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cormorant Garant', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: {
+              950: '#0a0a0a',
+              900: '#111111',
+              800: '#1a1a1a',
+              700: '#262626',
+            },
+            terra: {
+              200: '#e8d5bc',
+              300: '#d8c0a0',
+              400: '#C4A882',
+              500: '#b09068',
+              600: '#8f7350',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom, rgba(10,10,10,0.60) 0%, rgba(10,10,10,0.40) 35%, rgba(10,10,10,0.88) 100%),
+        url('images/foto3.jpg');
+      background-size: cover;
+      background-position: center 40%;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,0.40);
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .gallery-item:hover::after { opacity: 0; }
+    .gallery-item img { transition: transform 0.7s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .class-row {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: border-color 0.3s ease;
+    }
+    .class-row:hover { border-color: rgba(196,168,130,0.35); }
+
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #C4A882;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-ink-950 text-white font-sans antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-ink-950/92 backdrop-blur-sm border-b border-white/[0.06]">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#inicio" class="font-serif text-xl font-400 tracking-[0.14em] text-white">ŪNNO</a>
+      <nav class="hidden md:flex items-center gap-9 text-[11px] font-sans font-medium text-white/45 tracking-[0.18em] uppercase">
+        <a href="#clases" class="nav-link hover:text-white/80 transition-colors duration-200">Clases</a>
+        <a href="#horarios" class="nav-link hover:text-white/80 transition-colors duration-200">Horarios</a>
+        <a href="#espacio" class="nav-link hover:text-white/80 transition-colors duration-200">El espacio</a>
+        <a href="#ubicacion" class="nav-link hover:text-white/80 transition-colors duration-200">Ubicación</a>
+      </nav>
+      <a
+        href="https://wa.me/528110716341?text=Hola%2C%20quisiera%20reservar%20una%20clase%20en%20%C5%ABNNO%20YOGA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border border-terra-400/50 hover:border-terra-400 hover:bg-terra-400/8 text-terra-400 font-sans font-medium text-[11px] px-5 py-2.5 tracking-[0.18em] uppercase transition-all duration-200"
+      >
+        Reservar clase
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg min-h-screen flex flex-col justify-end pb-20 md:pb-28 px-6 pt-16">
+    <div class="max-w-6xl mx-auto w-full">
+      <p class="text-terra-400 font-sans font-medium tracking-[0.45em] text-[11px] uppercase mb-8">
+        Centrito Valle · San Pedro Garza García
+      </p>
+      <h1 class="font-serif font-300 text-[5rem] md:text-[9rem] leading-[0.88] mb-10 tracking-[-0.01em]">
+        ŪNNO<br />
+        <span class="text-white/60 italic font-300">YOGA</span>
+      </h1>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <p class="font-serif font-300 italic text-white/55 text-2xl md:text-3xl leading-snug max-w-sm">
+          La ciencia y el arte<br />de habitar tu cuerpo.
+        </p>
+        <a
+          href="https://wa.me/528110716341?text=Hola%2C%20quisiera%20reservar%20una%20clase%20en%20%C5%ABNNO%20YOGA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-terra-400 hover:bg-terra-300 text-ink-950 font-sans font-semibold px-8 py-4 text-[11px] tracking-[0.18em] uppercase transition-colors duration-200 self-start md:self-auto"
+          aria-label="Reservar clase por WhatsApp"
+        >
+          Reservar clase
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASES -->
+  <section id="clases" class="py-32 px-6 bg-ink-950">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-14 border-b border-white/[0.07] mb-0">
+        <div>
+          <p class="text-terra-400 text-[11px] tracking-[0.4em] uppercase font-sans font-medium mb-5">Práctica</p>
+          <h2 class="font-serif font-300 text-5xl md:text-6xl">Nuestras clases</h2>
+        </div>
+        <p class="text-white/35 text-sm font-sans leading-relaxed max-w-xs pb-1">
+          Tres disciplinas.<br />Una sola intención: precisión, quietud y presencia.
+        </p>
+      </div>
+
+      <!-- Iyengar -->
+      <div class="class-row group cursor-default py-14">
+        <div class="grid grid-cols-[56px_1fr] md:grid-cols-[72px_1fr_200px] gap-6 md:gap-12 items-start">
+          <span class="font-serif font-300 text-terra-400/40 text-4xl leading-none group-hover:text-terra-400 transition-colors duration-300 pt-1">01</span>
+          <div>
+            <h3 class="font-serif font-400 text-3xl md:text-4xl mb-4 leading-tight">Iyengar Yoga Certificado</h3>
+            <p class="text-white/45 text-sm font-sans leading-relaxed max-w-xl">
+              El método Iyengar trabaja la precisión postural y el uso consciente de apoyos para acceder con seguridad a cada asana. Desarrolla fuerza, alineación y atención sostenida. Nuestra instructora cuenta con certificación oficial B.K.S. Iyengar.
+            </p>
+          </div>
+          <div class="hidden md:block text-right pt-2">
+            <span class="text-terra-400/45 text-[11px] tracking-[0.2em] uppercase font-sans">Todos los niveles</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurativo -->
+      <div class="class-row group cursor-default py-14">
+        <div class="grid grid-cols-[56px_1fr] md:grid-cols-[72px_1fr_200px] gap-6 md:gap-12 items-start">
+          <span class="font-serif font-300 text-terra-400/40 text-4xl leading-none group-hover:text-terra-400 transition-colors duration-300 pt-1">02</span>
+          <div>
+            <h3 class="font-serif font-400 text-3xl md:text-4xl mb-4 leading-tight">Yoga Restaurativo</h3>
+            <p class="text-white/45 text-sm font-sans leading-relaxed max-w-xl">
+              Posturas pasivas sostenidas con apoyos que inducen una relajación profunda del sistema nervioso. Ideal para recuperación, estrés crónico o como complemento a cualquier práctica activa. El descanso como disciplina consciente.
+            </p>
+          </div>
+          <div class="hidden md:block text-right pt-2">
+            <span class="text-terra-400/45 text-[11px] tracking-[0.2em] uppercase font-sans">Todos los niveles</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vinyasa -->
+      <div class="class-row group cursor-default py-14">
+        <div class="grid grid-cols-[56px_1fr] md:grid-cols-[72px_1fr_200px] gap-6 md:gap-12 items-start">
+          <span class="font-serif font-300 text-terra-400/40 text-4xl leading-none group-hover:text-terra-400 transition-colors duration-300 pt-1">03</span>
+          <div>
+            <h3 class="font-serif font-400 text-3xl md:text-4xl mb-4 leading-tight">Vinyasa Yoga</h3>
+            <p class="text-white/45 text-sm font-sans leading-relaxed max-w-xl">
+              Secuencias fluidas que sincronizan movimiento y respiración. Cada transición es parte de la práctica. Construye calor interno, fuerza funcional y coordinación mente-cuerpo en un ritmo que invita a la presencia total.
+            </p>
+          </div>
+          <div class="hidden md:block text-right pt-2">
+            <span class="text-terra-400/45 text-[11px] tracking-[0.2em] uppercase font-sans">Nivel intermedio</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HORARIOS -->
+  <section id="horarios" class="py-32 px-6 bg-ink-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <p class="text-terra-400 text-[11px] tracking-[0.4em] uppercase font-sans font-medium mb-5">Agenda</p>
+        <h2 class="font-serif font-300 text-5xl md:text-6xl">Horarios</h2>
+      </div>
+
+      <div class="max-w-xl">
+        <div class="border-t border-white/[0.07]">
+
+          <div class="py-10 border-b border-white/[0.07] grid grid-cols-[1fr_auto] gap-6 items-start">
+            <div>
+              <p class="font-serif font-300 text-2xl md:text-3xl mb-1.5">Lunes — Jueves</p>
+              <p class="text-white/30 text-[11px] font-sans tracking-[0.2em] uppercase">Días de práctica</p>
+            </div>
+            <div class="text-right space-y-4">
+              <div>
+                <p class="text-terra-400 font-sans font-medium text-sm tracking-wide">10:00 — 12:00</p>
+                <p class="text-white/25 text-xs font-sans mt-0.5">Sesión matutina</p>
+              </div>
+              <div>
+                <p class="text-terra-400 font-sans font-medium text-sm tracking-wide">18:30 — 21:30</p>
+                <p class="text-white/25 text-xs font-sans mt-0.5">Sesión vespertina</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-10 border-b border-white/[0.07] grid grid-cols-[1fr_auto] gap-6 items-center">
+            <div>
+              <p class="font-serif font-300 text-2xl md:text-3xl mb-1.5">Viernes — Domingo</p>
+              <p class="text-white/30 text-[11px] font-sans tracking-[0.2em] uppercase">Descanso del estudio</p>
+            </div>
+            <div class="text-right">
+              <p class="text-white/25 font-sans text-sm tracking-[0.1em]">Cerrado</p>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-white/25 text-xs font-sans mt-7 leading-relaxed">
+          Se recomienda reservar con anticipación por WhatsApp.<br />
+          Los horarios pueden variar en fechas especiales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL ESPACIO -->
+  <section id="espacio" class="py-32 px-6 bg-ink-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <p class="text-terra-400 text-[11px] tracking-[0.4em] uppercase font-sans font-medium mb-5">Galería</p>
+        <h2 class="font-serif font-300 text-5xl md:text-6xl">El espacio</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-2">
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto3.jpg"
+            alt="Clase de inversiones Iyengar en ŪNNO YOGA"
+            class="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto2.jpg"
+            alt="Instructor corrigiendo postura con correa"
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto4.jpg"
+            alt="Inversiones con cuerdas Iyengar"
+            class="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto1.jpg"
+            alt="Yoga restaurativo con apoyos"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto5.jpg"
+            alt="Props Iyengar — bolsters, bloques y sillas del estudio"
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item aspect-square bg-ink-800">
+          <img
+            src="images/foto6.jpg"
+            alt="El salón de ŪNNO YOGA — espacio vacío con piso de madera y luz de noche"
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section class="py-32 px-6 bg-ink-900">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-14 border-b border-white/[0.07] mb-0">
+        <div>
+          <p class="text-terra-400 text-[11px] tracking-[0.4em] uppercase font-sans font-medium mb-5">Testimonios</p>
+          <h2 class="font-serif font-300 text-5xl md:text-6xl">Lo que dicen</h2>
+        </div>
+        <p class="text-white/35 text-sm font-sans leading-relaxed max-w-xs pb-1">
+          Reseñas reales de alumnos<br />en Google Maps.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-0">
+
+        <div class="py-12 md:pr-12 border-b md:border-b-0 md:border-r border-white/[0.07]">
+          <div class="flex gap-0.5 mb-6">
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="font-serif font-300 text-xl text-white/80 leading-relaxed mb-8 italic">
+            "Llevaba años buscando un estudio que enseñara Iyengar de verdad. La atención a la alineación y el uso de los apoyos cambiaron completamente mi práctica."
+          </blockquote>
+          <div>
+            <p class="text-white/70 text-sm font-sans font-medium">Sofía R.</p>
+            <p class="text-white/25 text-xs font-sans mt-0.5">Google Maps</p>
+          </div>
+        </div>
+
+        <div class="py-12 md:px-12 border-b md:border-b-0 md:border-r border-white/[0.07]">
+          <div class="flex gap-0.5 mb-6">
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="font-serif font-300 text-xl text-white/80 leading-relaxed mb-8 italic">
+            "El instructor tiene una paciencia y precisión increíbles. Cada clase siento que aprendo algo nuevo sobre mi propio cuerpo. El espacio es hermoso y muy tranquilo."
+          </blockquote>
+          <div>
+            <p class="text-white/70 text-sm font-sans font-medium">Carlos M.</p>
+            <p class="text-white/25 text-xs font-sans mt-0.5">Google Maps</p>
+          </div>
+        </div>
+
+        <div class="py-12 md:pl-12">
+          <div class="flex gap-0.5 mb-6">
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-3 h-3 text-terra-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="font-serif font-300 text-xl text-white/80 leading-relaxed mb-8 italic">
+            "Llegué con dolor de espalda crónico. Después de dos meses con el yoga restaurativo, la diferencia es notable. Es más que una clase — es una práctica de vida."
+          </blockquote>
+          <div>
+            <p class="text-white/70 text-sm font-sans font-medium">Alejandra V.</p>
+            <p class="text-white/25 text-xs font-sans mt-0.5">Google Maps</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section id="ubicacion" class="py-32 px-6 bg-ink-900">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-20 items-start">
+
+      <div>
+        <p class="text-terra-400 text-[11px] tracking-[0.4em] uppercase font-sans font-medium mb-5">Cómo llegar</p>
+        <h2 class="font-serif font-300 text-4xl md:text-5xl mb-12">Ubicación</h2>
+
+        <div class="space-y-0">
+
+          <div class="py-8 border-t border-white/[0.07]">
+            <p class="text-[11px] font-sans tracking-[0.2em] uppercase text-white/25 mb-3">Dirección</p>
+            <p class="font-serif font-300 text-xl text-white/85 leading-relaxed">
+              Río Orinoco 101, 3er piso<br />
+              Centrito Valle<br />
+              San Pedro Garza García, NL
+            </p>
+            <a
+              href="https://maps.app.goo.gl/U6NZRzuwusWjSRUV7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-terra-400 text-[11px] font-sans tracking-[0.15em] uppercase hover:text-terra-300 transition-colors duration-200 mt-4 inline-block"
+            >
+              Abrir en Google Maps →
+            </a>
+          </div>
+
+          <div class="py-8 border-t border-white/[0.07]">
+            <p class="text-[11px] font-sans tracking-[0.2em] uppercase text-white/25 mb-3">Acceso</p>
+            <p class="text-white/50 text-sm font-sans leading-relaxed">
+              Estamos en el 3er piso — busca el elevador al llegar.
+            </p>
+          </div>
+
+          <div class="py-8 border-t border-white/[0.07]">
+            <p class="text-[11px] font-sans tracking-[0.2em] uppercase text-white/25 mb-3">Horarios</p>
+            <div class="text-sm font-sans space-y-2">
+              <div class="flex justify-between gap-6">
+                <span class="text-white/50">Lunes – Jueves</span>
+                <span class="text-terra-400 font-medium">10:00–12:00 · 18:30–21:30</span>
+              </div>
+              <div class="flex justify-between gap-6">
+                <span class="text-white/50">Viernes – Domingo</span>
+                <span class="text-white/25">Cerrado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-8 border-t border-white/[0.07]">
+            <p class="text-[11px] font-sans tracking-[0.2em] uppercase text-white/25 mb-3">Contacto</p>
+            <a
+              href="https://wa.me/528110716341"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white/50 text-sm font-sans hover:text-terra-400 transition-colors duration-200"
+            >
+              +52 811 071 6341
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="overflow-hidden h-[500px] bg-ink-800 border border-white/[0.06]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.5!2d-100.3698479!3d25.6601983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bd5a25f45201%3A0xf3f46a62eebfa8f7!2sUNNO%20Yoga!5e0!3m2!1ses!2smx!4v1717000000000!5m2!1ses!2smx"
+          width="100%"
+          height="100%"
+          style="border:0; filter: grayscale(100%) invert(88%) contrast(80%) brightness(0.9);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de ŪNNO YOGA — Río Orinoco 101, San Pedro Garza García"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-40 px-6 bg-ink-950">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-terra-400 text-[11px] tracking-[0.45em] uppercase font-sans font-medium mb-7">Comienza hoy</p>
+      <h2 class="font-serif font-300 text-6xl md:text-8xl leading-[0.9] mb-8">
+        Reserva tu<br />clase hoy
+      </h2>
+      <p class="text-white/35 text-sm font-sans mb-12 max-w-xs mx-auto leading-relaxed">
+        Escríbenos por WhatsApp para reservar tu lugar. Te confirmamos en minutos.
+      </p>
+      <a
+        href="https://wa.me/528110716341?text=Hola%2C%20quisiera%20reservar%20una%20clase%20en%20%C5%ABNNO%20YOGA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-terra-400 hover:bg-terra-300 text-ink-950 font-sans font-semibold px-10 py-5 text-[11px] tracking-[0.18em] uppercase transition-colors duration-200"
+        aria-label="Reservar clase por WhatsApp"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Reservar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-900 border-t border-white/[0.07] py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-white/[0.07]">
+        <div>
+          <p class="font-serif font-300 text-2xl tracking-[0.12em] text-white mb-1">ŪNNO YOGA</p>
+          <p class="text-white/30 text-xs font-sans">Centrito Valle · San Pedro Garza García, NL</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-8 sm:gap-14 text-xs font-sans text-white/30">
+          <div>
+            <p class="text-white/18 tracking-[0.18em] uppercase mb-2.5 text-[10px]">Horarios</p>
+            <p class="leading-relaxed">Lun–Jue: 10:00–12:00 · 18:30–21:30</p>
+            <p class="mt-1">Vie–Dom: Cerrado</p>
+          </div>
+          <div>
+            <p class="text-white/18 tracking-[0.18em] uppercase mb-2.5 text-[10px]">Contacto</p>
+            <a
+              href="https://wa.me/528110716341"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-terra-400 transition-colors duration-200 block"
+            >
+              +52 811 071 6341
+            </a>
+            <a
+              href="https://www.instagram.com/unno.yoga?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-terra-400 transition-colors duration-200 mt-1.5 block"
+            >
+              @unno.yoga
+            </a>
+            <a
+              href="https://www.facebook.com/unnoyogamx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-terra-400 transition-colors duration-200 mt-1.5 block"
+            >
+              facebook.com/unnoyogamx
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-sans text-white/18">
+        <p>&copy; 2025 ŪNNO YOGA. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-5">
+          <a
+            href="https://www.instagram.com/unno.yoga?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 hover:text-terra-400 transition-colors duration-200"
+            aria-label="Instagram de ŪNNO YOGA"
+          >
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @unno.yoga
+          </a>
+          <a
+            href="https://www.facebook.com/unnoyogamx/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 hover:text-terra-400 transition-colors duration-200"
+            aria-label="Facebook de ŪNNO YOGA"
+          >
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            unnoyogamx
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
